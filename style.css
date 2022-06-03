@@ -37,7 +37,8 @@ body {
   height: 2rem;
   background-color: rgb(221, 218, 218);
   border-radius: 50%;
-  border-color: black 1rem;
+  border: thick;
+  border-color: rgb(252, 249, 249) 1rem;
 }
 .nav > h2 {
   padding-left: 0.5rem;
@@ -78,6 +79,7 @@ body {
   top: -1%;
   width: 90%;
   height: 300 px;
+  opacity: 1;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -91,6 +93,24 @@ body {
     rgba(15, 42, 123, 0.746)
   );
   border-radius: 0.5rem;
+}
+.card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 1rem;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 3rem;
+  right: -1rem;
+  scale: 0.8;
+  opacity: 0.5;
 }
 .card-line1 {
   display: flex;
@@ -134,7 +154,9 @@ body {
   cursor: pointer;
   color: rgb(15, 42, 123);
   background: white;
+  z-index: 1;
 }
+
 .price {
   display: flex;
   align-items: center;
@@ -145,4 +167,115 @@ body {
   font-size: 1rem;
 }
 /* Form style */
-.form-wrapper
+.form-wrapper {
+  z-index: 2;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 414px;
+  height: 981px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+.form-wrapper.active {
+  z-index: 2;
+  opacity: 1;
+  pointer-events: all;
+}
+.actual-form {
+  z-index: 2;
+  position: absolute;
+  top: 13.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-9%);
+  width: 100%;
+
+  padding: 1rem;
+  width: 90%;
+
+  background: white;
+  border-radius: 1rem;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.actual-form.active {
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0%);
+}
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.form-title h2 {
+  color: black;
+}
+.form-title i {
+  cursor: pointer;
+}
+.close {
+  padding: 0.2rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+  background-color: black;
+  color: white;
+  font-size: 600;
+  cursor: pointer;
+  pointer-events: all;
+}
+.form-line1,
+.form-line2,
+.form-line3,
+.form-line4 {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  pointer-events: all;
+}
+label {
+  color: gray;
+}
+input {
+  border: none;
+  padding: 0.7rem 0rem;
+  outline: none;
+  font-size: 1rem;
+}
+::placeholder {
+  color: rgb(106, 106, 162);
+}
+.form-button {
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-button button {
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: all;
+}
+.cancel {
+  background: rgb(61, 60, 60);
+}
+.activate {
+  background: rgb(86, 213, 192);
+}
