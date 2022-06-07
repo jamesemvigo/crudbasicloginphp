@@ -48,7 +48,7 @@ emailField.addEventListener("input", updateEmailInput);
 function updateNumberInput(e) {
   inputNumber = e.target.value;
   console.log(inputNumber);
-  let phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{5})[-. ]?([0-9]{5})$/;
+  let phoneno = /^\+?^([0]|\+91)?[-. ]?([0-9]{5})[-. ]?([0-9]{5})$/;
   if (!inputNumber.match(phoneno)) {
     numberError.innerHTML = `<i class="fa-solid fa-thumbs-down red"></i>`;
   } else {
