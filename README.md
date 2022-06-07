@@ -9,6 +9,6 @@
 
 ## Deploying your project
 
-- [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://jamesuidev.github.io/x-company-xloginpage/)
 
 - [Netlify](https://www.netlify.com/)
