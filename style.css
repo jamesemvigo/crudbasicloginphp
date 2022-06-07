@@ -7,6 +7,7 @@ body {
   font-size: 62.5%;
   font-family: sans-serif;
 }
+
 .global-container {
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@ body {
   position: relative;
 
   width: 100%;
-  min-height: 15.5vh;
+  min-height: 6rem;
   border-bottom-left-radius: 2rem;
   background: linear-gradient(to right, rgb(153, 37, 69), rgb(255, 157, 0));
 }
@@ -52,7 +53,7 @@ body {
   background: white;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  transform: translate(-15%, -50%);
+  transform: translate(-15%, -30%);
 }
 .person-logo {
   width: 2rem;
@@ -76,9 +77,9 @@ body {
 }
 .card {
   position: relative;
-  top: -1%;
+
   width: 90%;
-  height: 300 px;
+  height: 400 px;
   opacity: 1;
   margin-left: auto;
   margin-right: auto;
@@ -92,7 +93,7 @@ body {
     rgba(177, 21, 177, 0.868),
     rgba(15, 42, 123, 0.746)
   );
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
 }
 .card-img {
   position: absolute;
@@ -195,14 +196,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateY(-9%);
+  top: 9.9rem;
   width: 100%;
 
   padding: 1rem;
   width: 90%;
 
   background: white;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   transform: translateX(120%);
   opacity: 0;
   transition: all 0.5s ease-in-out;
@@ -224,17 +225,21 @@ body {
 .form-title i {
   cursor: pointer;
 }
-.close {
-  padding: 0.2rem;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.2rem;
-  background-color: black;
+.closebody {
   color: white;
-  font-size: 600;
+  background: black;
   cursor: pointer;
-  pointer-events: all;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  transition: all 0.4s ease-in-out;
+  border: none;
 }
+.closebody:hover {
+  background: white;
+  color: black;
+}
+
 .form-line1,
 .form-line2,
 .form-line3,
@@ -244,6 +249,25 @@ body {
   flex-direction: column;
   cursor: pointer;
   pointer-events: all;
+  position: relative;
+}
+.form-line1 > span {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 19rem;
+  top: 2.5rem;
+}
+.form-line4 > span {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 19rem;
+  top: 2.5rem;
+}
+.red {
+  color: rgba(255, 0, 0, 0.791);
+}
+.green {
+  color: rgba(0, 128, 0, 0.86);
 }
 label {
   color: gray;
@@ -278,4 +302,9 @@ input {
 }
 .activate {
   background: rgb(86, 213, 192);
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.1px solid #ababab64;
 }

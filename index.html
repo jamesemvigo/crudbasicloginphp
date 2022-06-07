@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <button class="card-button">Active Now</button>
+          <button class="card-button">Active</button>
         </div>
         <div class="card-img">
           <img
@@ -60,7 +60,9 @@
         <form class="actual-form">
           <div class="form-title">
             <h2>Enter your details below</h2>
-            <div class="closebody"><i class="fas fa-close close"></i></div>
+            <button class="closebody">
+              <i class="fas fa-close close"></i>
+            </button>
           </div>
           <div class="form-line1">
             <label for="ph-number">Phone Number</label>
@@ -69,8 +71,8 @@
               id="ph-number"
               class="phonenumber"
               placeholder="enter mobile number"
-              required
             />
+            <span class="number-error"></span>
           </div>
           <div class="form-line2">
             <label for="pan-number">PAN Card Number</label>
@@ -94,14 +96,15 @@
             <label for="email-id">Email</label>
             <input
               type="email"
-              id="emaild-id"
+              id="email-id"
               class="email"
               placeholder="Enter your mail"
             />
+            <span class="email-error"></span>
           </div>
           <div class="form-button">
             <button class="cancel">Cancel</button>
-            <button class="activate">Activate Now</button>
+            <button class="activate" type="submit">Activate Now</button>
           </div>
         </form>
       </div>
