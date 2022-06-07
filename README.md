@@ -1,6 +1,6 @@
 # X Company-Login Page task
 
-![Design preview for the NFT preview card component coding challenge](./images/Dashboard-UI.png)
+![Design preview for the NFT preview card component coding challenge](./images/DashboardUI.png)
 ![Design preview for the NFT preview card component coding challenge](./images/Popup.png)
 
 ## The challenge Task
