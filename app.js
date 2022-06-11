@@ -47,11 +47,15 @@ emailField.addEventListener("input", updateEmailInput);
 
 function updateNumberInput(e) {
   inputNumber = e.target.value;
+  let numberLength = inputNumber.length;
   console.log(inputNumber);
   let phoneno = /^\+?^([0]|\+91)?[-. ]?([0-9]{5})[-. ]?([0-9]{5})$/;
 
   if (!inputNumber.match(phoneno)) {
     numberError.innerHTML = `<i class="fa-solid fa-thumbs-down red"></i>`;
+    if (numberLength === 0) {
+      numberError.innerHTML = "";
+    }
   } else {
     numberError.innerHTML = `<i class="fa-solid fa-thumbs-up green"></i>`;
   }
@@ -59,9 +63,13 @@ function updateNumberInput(e) {
 function updateEmailInput(e) {
   inputEmail = e.target.value;
   console.log(inputEmail);
+  let emailLength = inputEmail.length;
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (!inputEmail.match(mailformat)) {
     emailError.innerHTML = `<i class="fa-solid fa-thumbs-down red"></i>`;
+    if (emailLength === 0) {
+      emailError.innerHTML = "";
+    }
   } else {
     emailError.innerHTML = `<i class="fa-solid fa-thumbs-up green"></i>`;
   }
