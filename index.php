@@ -92,6 +92,15 @@
               placeholder="Enter Name"
             />
           </div>
+          <div class="form-line3">
+            <label for="pan-name">Name as in PAN Card</label>
+            <input
+              type="text"
+              id="pan-name"
+              class="panname"
+              placeholder="Enter Name"
+            />
+          </div>
           <div class="form-line4">
             <label for="email-id">Email</label>
             <input
