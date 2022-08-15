@@ -1,4 +1,40 @@
-<!DOCTYPE html>
+
+<?php
+include("connection.php");
+$sql = "select * from crudtable";
+
+$query = $conn->query($sql);
+
+
+if($query->num_rows > 0){
+
+
+		while($result = $query->fetch_assoc()){
+		
+		// echo $result["phone"]."----".$result["pan"]."----".$result["name"]."----".$result["email"]."---".$result["created_at"]."<br>";
+		
+		}
+
+}else{
+
+echo "No data found";
+
+}
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,15 +73,10 @@
           <p>Interest <br />pre-approved credit line</p>
         </div>
         <div class="card-line3">
-          <div>
-            <p>Annual Fee</p>
-            <div class="price">
-              <i class="fa fa-rupee"> </i>
-              <h2 class>3,40,000</h2>
-            </div>
-          </div>
-
-          <button class="card-button">Active</button>
+          
+          <button class="card-button">Sign Up</button>
+          <button class="card-button outsidelogin">Login</button>
+          <button class="card-button outsideupdate">Update</button>
         </div>
         <div class="card-img">
           <img
@@ -53,11 +84,32 @@
             alt="video illustration"
             class="image-fluid"
           />
-        </div>
+          </div>
+          <?php if(isset($_REQUEST['message'])){
+              
+              		
+              if($_REQUEST['message'] == "success"){
+              
+              
+              echo "<h4 style='color:green'>form subitted successfully</h4>";
+              
+              
+              }else{
+              
+              
+              echo "Something went wrong";
+              
+              
+              }
+          
+          }
+          
+          ?>
       </div>
       <!-- Form -->
+      <!-- Sign Up -->
       <div class="form-wrapper">
-        <form class="actual-form">
+        <form  action="registeractiontwo.php" method="GET" class="actual-form">
           <div class="form-title">
             <h2>Enter your details below</h2>
             <button class="closebody">
@@ -67,7 +119,7 @@
           <div class="form-line1">
             <label for="ph-number">Phone Number</label>
             <input
-              type="text"
+              type="text" name="phone"
               id="ph-number"
               class="phonenumber"
               placeholder="enter mobile number"
@@ -77,7 +129,7 @@
           <div class="form-line2">
             <label for="pan-number">PAN Card Number</label>
             <input
-              type="text"
+              type="text" name="pan"
               id="pan-number"
               class="pancard"
               placeholder="enter PAN"
@@ -86,16 +138,7 @@
           <div class="form-line3">
             <label for="pan-name">Name as in PAN Card</label>
             <input
-              type="text"
-              id="pan-name"
-              class="panname"
-              placeholder="Enter Name"
-            />
-          </div>
-          <div class="form-line3">
-            <label for="pan-name">Name as in PAN Card</label>
-            <input
-              type="text"
+              type="text" name="name"
               id="pan-name"
               class="panname"
               placeholder="Enter Name"
@@ -107,13 +150,24 @@
               type="email"
               id="email-id"
               class="email"
-              placeholder="Enter your mail"
+              placeholder="Enter your mail" name="email"
             />
             <span class="email-error"></span>
           </div>
+          <div class="form-line5">
+            <label for="password">Password</label>
+            <input
+              type="varchar"
+              name="password"
+              id="password"
+              class="panname"
+              placeholder="Enter password"
+            />
+          </div>
+          
           <div class="form-button">
             <button class="cancel">Cancel</button>
-            <button class="activate" type="submit">Activate Now</button>
+            <button class="activate" type="submit" name="submit" value="submit">Create an Account</button>
           </div>
         </form>
       </div>

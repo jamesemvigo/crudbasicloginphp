@@ -18,15 +18,15 @@ activedashBtn.addEventListener("click", (e) => {
   actualForm.classList.add("active");
 });
 closeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   removeformSlide();
 });
 cancelBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   removeformSlide();
 });
 activateBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   removeformSlide();
 });
 numberField.addEventListener("input", updateNumberInput);
@@ -78,9 +78,9 @@ function removeformSlide() {
   setTimeout(() => {
     formWrapper.classList.remove("active");
   }, 500);
-  inputFields.forEach((input) => {
-    input.value = "";
-  });
+  // inputFields.forEach((input) => {
+  //   input.value = "";
+  // });
   emailError.innerHTML = "";
   numberError.innerHTML = "";
   actualForm.classList.remove("active");

@@ -147,7 +147,7 @@ body {
   padding: 0.5rem;
 }
 .card-line3 h2 {
-  font-size: 1.5rem;
+  opacity: 0;
 }
 
 .card-line3 button {
@@ -247,7 +247,7 @@ body {
 .form-line1,
 .form-line2,
 .form-line3,
-.form-line4 {
+.form-line4,.form-line5 {
   padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
