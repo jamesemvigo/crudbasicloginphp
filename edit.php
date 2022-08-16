@@ -41,64 +41,13 @@ echo "No data found";
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./editformstyle.css" />
     <title>Company X interview task</title>
   </head>
   <body>
     <div class="global-container">
-      <header class="nav">
-        <div class="dp"></div>
-        <h2>School name</h2>
-      </header>
-
-      <div class="label">
-        <div class="person-logo">
-          <img src="./images/sigmund-MQ2xYBHImKM-unsplash--1--1.jpg" alt="" />
-        </div>
-        <div class="person-details">
-          <h3>Jessica John jones</h3>
-          <p><i class="fas fa-trophy"></i> F51 Garcia</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-line1">
-          <h2>
-            Now pay your <br />
-            fee motnhly with @
-          </h2>
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="card-line2">
-          <h1>0%</h1>
-          <p>Interest <br />pre-approved credit line</p>
-        </div>
-        <div class="card-line3">
-          
-          <button class="card-button">Sign Up</button>
-          <button class="card-button outsidelogin">Login</button>
-          <button class="card-button outsideupdate">Update</button>
-        </div>
-        <div class="card-img">
-          <img
-            src="./images/intro-section-illustration.png"
-            alt="video illustration"
-            class="image-fluid"
-          />
-          </div>
-         <!-- DASHBOARD -->
-
-
-      </div>
-      <div>
-         <header>
-          <table>
-          <tr>
-            <th><a href="index.php"> click Sign Up</a>  || </th> </th><th><a href="dashboard.php">Dashboard</a></th></tr>
-          </table>
-         </header>
-
-         </div> 
-      <?php if(isset($_REQUEST['message'])){
+      
+      <!-- <?php if(isset($_REQUEST['message'])){
               
               		
               if($_REQUEST['message'] == "success"){
@@ -117,13 +66,12 @@ echo "No data found";
           
           }
           
-          ?>
-      <!-- Form -->
-      <!-- Sign Up -->
+          ?> -->
+      
       <div class="form-wrapper">
         <form  action="registeractiontwo.php" method="POST" class="actual-form">
           <div class="form-title">
-            <h2>Enter your details below</h2>
+            <h2>Edit user</h2>
             <button class="closebody">
               <i class="fas fa-close close"></i>
             </button>

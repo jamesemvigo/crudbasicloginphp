@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 62.5%;
+    font-family: sans-serif;
+  }
+  
+  .global-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    position: relative;
+    width: 414px;
+    height: 981px;
+    margin: auto;
+    background: rgb(243, 243, 243);
+  }
+
+
+  /* Form style */
+  .form-wrapper {
+    z-index: 2;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 414px;
+    height: 981px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+  
+    padding: 1rem;
+    overflow: hidden;
+  }
+  .form-wrapper.active {
+    z-index: 2;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .actual-form {
+    z-index: 2;
+    position: absolute;
+    top: 13.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 9.9rem;
+    width: 100%;
+  
+    padding: 1rem;
+    width: 90%;
+  
+    background: white;
+    border-radius: 0.8rem;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .actual-form.active {
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .form-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+  .form-title h2 {
+    color: black;
+  }
+  .form-title i {
+    cursor: pointer;
+  }
+  .closebody {
+    color: white;
+    background: black;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    transition: all 0.4s ease-in-out;
+    border: none;
+  }
+  .closebody:hover {
+    background: white;
+    color: black;
+  }
+  
+  .form-line1,
+  .form-line2,
+  .form-line3,
+  .form-line4,.form-line5 {
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+  }
+  .form-line1 > span {
+    position: absolute;
+    font-size: 1.2rem;
+    left: 19rem;
+    top: 2.5rem;
+  }
+  .form-line4 > span {
+    position: absolute;
+    font-size: 1.2rem;
+    left: 19rem;
+    top: 2.5rem;
+  }
+  .red {
+    color: rgba(255, 0, 0, 0.791);
+  }
+  .green {
+    color: rgba(0, 128, 0, 0.86);
+  }
+  label {
+    color: gray;
+  }
+  input {
+    border: none;
+    padding: 0.7rem 0rem;
+    outline: none;
+    font-size: 1rem;
+  }
+  ::placeholder {
+    color: rgb(106, 106, 162);
+  }
+  .form-button {
+    display: flex;
+    padding: 1rem 0rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-button button {
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .cancel {
+    background: rgb(61, 60, 60);
+  }
+  .activate {
+    background: rgb(86, 213, 192);
+  }
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.1px solid #ababab64;
+  }
+  
